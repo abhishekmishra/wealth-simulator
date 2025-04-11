@@ -1,0 +1,21 @@
+body {
+  font-family: sans-serif;
+  margin: 1rem;
+}
+.sim-container {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.sim-example {
+  height: 200px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+form {
+  margin-bottom: 1rem;
+}
+form label {
+  display: block;
+  margin-top: 0.5rem;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wealth Simulation Explorer</title>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5"></script>
+  <script src="simulate.js" type="module" defer></script>
+  <script src="ui.js" type="module" defer></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Wealth Simulation Explorer</h1>
+
+  <h2>Main Simulator</h2>
+  <form id="sim-form">
+    <label>Gain multiplier: <input type="number" step="0.01" id="gain" value="1.15"></label>
+    <label>Loss multiplier: <input type="number" step="0.01" id="loss" value="0.85"></label>
+    <label>Probability of gain: <input type="number" step="0.01" min="0" max="1" id="probGain" value="0.5"></label>
+    <label>Years: <input type="number" id="years" value="50"></label>
+    <label>Simulations: <input type="number" id="simulations" value="20"></label>
+    <button type="submit">Run Simulation</button>
+  </form>
+
+  <div id="main-sim" class="sim-container" style="height: 400px;"></div>
+
+  <h2>Example Simulations</h2>
+  <div id="example-gallery">
+    <div class="sim-example sim-container" data-params='{"gain":1.2,"loss":0.8,"probGain":0.5,"years":50,"simulations":20}'></div>
+    <div class="sim-example sim-container" data-params='{"gain":1.15,"loss":0.85,"probGain":0.45,"years":50,"simulations":20}'></div>
+  </div>
+</body>
+</html>
