@@ -58,4 +58,6 @@ button {
   color: #666;
   border: 1px solid #ccc;
   cursor: not-allowed;
+  font-size: 0.9rem; /* Reduced text size */
+  width: 300px; /* Increased width */
 }
