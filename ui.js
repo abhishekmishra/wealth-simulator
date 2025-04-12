@@ -1,8 +1,13 @@
 import { simulateWealth } from './simulate.js';
 
 document.querySelectorAll('.sim-example').forEach(div => {
-  div.style.cursor = 'pointer';
   const params = JSON.parse(div.dataset.params);
+  const paramsDisplay = document.createElement('div');
+  paramsDisplay.textContent = `Gain: ${params.gain}, Loss: ${params.loss}, ProbGain: ${params.probGain}, Years: ${params.years}, Simulations: ${params.simulations}`;
+  paramsDisplay.style.marginBottom = '10px';
+  div.parentNode.insertBefore(paramsDisplay, div);
+
+  div.style.cursor = 'pointer';
   simulateWealth({ ...params, target: div });
   div.addEventListener('dblclick', () => {
     simulateWealth({ ...params, target: document.getElementById('main-sim') });
