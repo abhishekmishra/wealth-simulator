@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     params.set("years", document.getElementById("years").value);
     params.set("simulations", document.getElementById("simulations").value);
 
-    const permalink = `${window.location.origin}/sim.html?${params.toString()}`;
+    const permalink = `${window.location.origin}${window.location.pathname.replace(/\/[^/]*$/, "/sim.html")}?${params.toString()}`;
     permalinkInput.value = permalink;
   }
 
