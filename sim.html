@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wealth Simulation</title>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5"></script>
+  <script src="simulate.js" defer></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #sim {
+      height: 100vh;
+      width: 100vw;
+    }
+  </style>
+</head>
+<body>
+  <div id="sim"></div>
+
+  <script type="module">
+    import { simulateWealth } from './simulate.js';
+
+    function getParams() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return {
+        gain: parseFloat(urlParams.get('gain')) || 1.15,
+        loss: parseFloat(urlParams.get('loss')) || 0.85,
+        probGain: parseFloat(urlParams.get('prob')) || 0.5,
+        years: parseInt(urlParams.get('years')) || 50,
+        simulations: parseInt(urlParams.get('simulations')) || 20
+      };
+    }
+
+    const params = getParams();
+    simulateWealth({ ...params, target: document.getElementById('sim') });
+  </script>
+</body>
+</html>

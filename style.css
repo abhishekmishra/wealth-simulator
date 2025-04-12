@@ -48,3 +48,14 @@ button {
   height: 200px;
   cursor: pointer;
 }
+
+#permalink-container {
+  margin-bottom: 1rem;
+}
+
+#permalink-container input[readonly] {
+  background-color: #f0f0f0;
+  color: #666;
+  border: 1px solid #ccc;
+  cursor: not-allowed;
+}

@@ -31,3 +31,35 @@ document.getElementById('sim-form').addEventListener('submit', e => {
 
 const firstParams = JSON.parse(document.querySelector('.sim-example').dataset.params);
 simulateWealth({ ...firstParams, target: document.getElementById('main-sim') });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const permalinkInput = document.getElementById("permalink");
+  const copyButton = document.getElementById("copy-permalink");
+  const openButton = document.getElementById("open-permalink");
+  const simForm = document.getElementById("sim-form");
+
+  function updatePermalink() {
+    const params = new URLSearchParams();
+    params.set("gain", document.getElementById("gain").value);
+    params.set("loss", document.getElementById("loss").value);
+    params.set("probGain", document.getElementById("probGain").value);
+    params.set("years", document.getElementById("years").value);
+    params.set("simulations", document.getElementById("simulations").value);
+
+    const permalink = `${window.location.origin}/sim.html?${params.toString()}`;
+    permalinkInput.value = permalink;
+  }
+
+  simForm.addEventListener("input", updatePermalink);
+  updatePermalink();
+
+  copyButton.addEventListener("click", () => {
+    navigator.clipboard.writeText(permalinkInput.value).then(() => {
+      alert("Permalink copied to clipboard!");
+    });
+  });
+
+  openButton.addEventListener("click", () => {
+    window.open(permalinkInput.value, "_blank");
+  });
+});
