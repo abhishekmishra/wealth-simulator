@@ -12,12 +12,14 @@
       padding: 0;
     }
     #sim {
-      height: 100vh;
-      width: 100vw;
+      height: calc(100vh - 50px); /* Adjust height to account for params display */
+      width: 100%;
+      box-sizing: border-box;
     }
   </style>
 </head>
 <body>
+  <div id="params-display" style="padding: 10px; font-family: Arial, sans-serif; background-color: #f9f9f9; border-bottom: 1px solid #ccc;"></div>
   <div id="sim"></div>
 
   <script type="module">
@@ -35,6 +37,11 @@
     }
 
     const params = getParams();
+
+    // Display simulation parameters
+    const paramsDisplay = document.getElementById('params-display');
+    paramsDisplay.textContent = `Gain: ${params.gain}, Loss: ${params.loss}, Probability of Gain: ${params.probGain}, Years: ${params.years}, Simulations: ${params.simulations}`;
+
     simulateWealth({ ...params, target: document.getElementById('sim') });
   </script>
 </body>
