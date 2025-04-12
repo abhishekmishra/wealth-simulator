@@ -1,6 +1,7 @@
 import { simulateWealth } from './simulate.js';
 
 document.querySelectorAll('.sim-example').forEach(div => {
+  div.style.cursor = 'pointer';
   const params = JSON.parse(div.dataset.params);
   simulateWealth({ ...params, target: div });
   div.addEventListener('dblclick', () => {
