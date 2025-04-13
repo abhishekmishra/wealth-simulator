@@ -61,3 +61,7 @@ button {
   font-size: 0.9rem; /* Reduced text size */
   width: 300px; /* Increased width */
 }
+
+#example-gallery {
+  margin-top: 1rem;
+}
