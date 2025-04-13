@@ -19,7 +19,6 @@ To visualize how multiplicative gains and losses evolve wealth over time in non-
 
 - **JavaScript + HTML** (no frameworks, build steps, or backend)
 - **Apache ECharts** for plotting
-- **Self-contained**: suitable for use in static websites (e.g., GitHub Pages)
 
 ---
 
