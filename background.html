@@ -186,7 +186,12 @@ id="toc-non-ergodic-systems">Non-Ergodic Systems</a></li>
 <li><a href="#equation-of-life" id="toc-equation-of-life">Equation Of
 Life</a></li>
 <li><a href="#wealth-simulator" id="toc-wealth-simulator">Wealth
+Simulator</a>
+<ul>
+<li><a href="#parameters-for-the-wealth-simulator"
+id="toc-parameters-for-the-wealth-simulator">Parameters for the Wealth
 Simulator</a></li>
+</ul></li>
 <li><a href="#implications" id="toc-implications">Implications</a></li>
 </ul>
 </nav>
@@ -250,17 +255,35 @@ this equation as wealth, and then imagine a persons wealth increasing
 and decreasing let’s say every year by one of two random
 multipliers.</p>
 <p><span class="math inline">\(x_{n} (t+1) = \begin{cases} m_{1}
-x_{n}(t) &amp; p=1/2\\m_{2} x_{n}(t) &amp;
-p=1/2\end{cases}\)</span></p>
+x_{n}(t) &amp; p=p_{1}\\m_{2} x_{n}(t) &amp;
+p=1-p_{1}\end{cases}\)</span></p>
 <p>where,</p>
 <p><span class="math inline">\(x_{n} (t+1)\)</span> is the new
 value,</p>
 <p><span class="math inline">\(x_{n} (t)\)</span> is the previous
 value,</p>
-<p><span class="math inline">\(m_{1}\)</span> is the first
+<p><span class="math inline">\(m_{1}\)</span> is the first (gain)
 multiplier,</p>
-<p><span class="math inline">\(m_{2}\)</span> is the second
-multiplier.</p>
+<p><span class="math inline">\(m_{2}\)</span> is the second (loss)
+multiplier,</p>
+<p><span class="math inline">\(p_{1}\)</span> is the probability of
+gain.</p>
+<h2 id="parameters-for-the-wealth-simulator">Parameters for the Wealth
+Simulator</h2>
+<p>The simulator on the main page has the following parameters that you
+can play around with, and press the “Run Simulation” button to see the
+resultant plot.</p>
+<ul>
+<li>The gain and loss multipliers.</li>
+<li>The number of years (periods or number of turns) to run the
+simulation.</li>
+<li>The number of individual systems to simulate.</li>
+<li>The probability of gain (of the first multiplier).</li>
+</ul>
+<p>For example, here’s the simulation for the values in the equation of
+life section.</p>
+<iframe src="/sim.html?gain=1.5&amp;loss=0.6&amp;probGain=0.5&amp;years=50&amp;simulations=100" style="width:100%; height:400px; border: 0;">
+</iframe>
 <h1 id="implications">Implications</h1>
 <ul>
 <li>The ensemble average of the wealth of all possible systems is quite
@@ -271,5 +294,6 @@ all systems.</li>
 <li>If one were to think about this in terms of wealth, it is perhaps
 more important to avoid loss than aim for great gains.</li>
 </ul>
+<p><a href="/index.html">◀️ Main Page</a></p>
 </body>
 </html>

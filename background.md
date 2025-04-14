@@ -75,8 +75,8 @@ It is interesting to think of the value increasing and decreasing in this
 equation as wealth, and then imagine a persons wealth increasing and decreasing
 let's say every year by one of two random multipliers.
 
-$x_{n} (t+1) = \begin{cases} m_{1} x_{n}(t) & p=1/2\\m_{2} x_{n}(t) &
-p=1/2\end{cases}$
+$x_{n} (t+1) = \begin{cases} m_{1} x_{n}(t) & p=p_{1}\\m_{2} x_{n}(t) &
+p=1-p_{1}\end{cases}$
 
 where,
 
@@ -84,10 +84,26 @@ $x_{n} (t+1)$ is the new value,
 
 $x_{n} (t)$ is the previous value,
 
-$m_{1}$ is the first multiplier,
+$m_{1}$ is the first (gain) multiplier,
 
-$m_{2}$ is the second multiplier.
+$m_{2}$ is the second (loss) multiplier,
 
+$p_{1}$ is the probability of gain.
+
+## Parameters for the Wealth Simulator
+
+The simulator on the main page has the following parameters that you can play
+around with, and press the "Run Simulation" button to see the resultant plot.
+
+* The gain and loss multipliers.
+* The number of years (periods or number of turns) to run the simulation.
+* The number of individual systems to simulate.
+* The probability of gain (of the first multiplier).
+
+For example, here's the simulation for the values in the equation of life section.
+
+<iframe src="/sim.html?gain=1.5&loss=0.6&probGain=0.5&years=50&simulations=100"
+style="width:100%; height:400px; border: 0;"> </iframe>
 
 # Implications
 
@@ -97,3 +113,5 @@ $m_{2}$ is the second multiplier.
   systems.
 * If one were to think about this in terms of wealth, it is perhaps more
   important to avoid loss than aim for great gains.
+
+[◀️ Main Page](/index.html)
