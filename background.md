@@ -102,7 +102,7 @@ around with, and press the "Run Simulation" button to see the resultant plot.
 
 For example, here's the simulation for the values in the equation of life section.
 
-<iframe src="/sim.html?gain=1.5&loss=0.6&probGain=0.5&years=50&simulations=100"
+<iframe src="./sim.html?gain=1.5&loss=0.6&probGain=0.5&years=50&simulations=100"
 style="width:100%; height:400px; border: 0;"> </iframe>
 
 # Implications
