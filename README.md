@@ -1,17 +1,11 @@
-# Wealth Simulation Explorer
+# Wealth Simulator
+This is a simple tool to help visualize how multiplicative gains and losses evolve wealth over time in non-ergodic systems. 
 
-## 🧠 Purpose
-To visualize how multiplicative gains and losses evolve wealth over time in non-ergodic systems. This tool helps users intuitively understand how the *geometric mean*, *variance*, and *sequence of gains/losses* matter more than average outcomes in these contexts.
+It is based on the idea of "Random Multiplicative Processes". Check it out here - [Wealth Simulator](https://abhishekmishra.github.io/wealth-simulator/)
 
----
+For some background on the math and implications see the page [Background for the Wealth Simulator](https://abhishekmishra.github.io/wealth-simulator/background.html)
 
-## 🌟 Goals
-
-- Allow users to simulate multiple wealth paths under user-defined return parameters.
-- Compare *ensemble average* to individual outcomes over time.
-- Support multiple simulation instances on a single page.
-- Enable loading of example scenarios into the main simulator interactively.
-- Keep the solution lightweight, embeddable, and fully client-side.
+The rest of this README talks about the implementation details and can be skipped. 
 
 ---
 
