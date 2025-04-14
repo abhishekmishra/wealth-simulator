@@ -2,6 +2,7 @@
 title: Background for the Wealth Simulator
 author: Abhishek Mishra
 date: 2025-04-13
+keywords: [wealth, simulator, ergodicity, non-ergodic, system]
 ---
 
 # Non-Ergodic Systems
@@ -77,7 +78,22 @@ let's say every year by one of two random multipliers.
 $x_{n} (t+1) = \begin{cases} m_{1} x_{n}(t) & p=1/2\\m_{2} x_{n}(t) &
 p=1/2\end{cases}$
 
+where,
+
+$x_{n} (t+1)$ is the new value,
+
+$x_{n} (t)$ is the previous value,
+
+$m_{1}$ is the first multiplier,
+
+$m_{2}$ is the second multiplier.
+
 
 # Implications
 
-* The ensemble average of the 
+* The ensemble average of the wealth of all possible systems is quite different
+  from the average of one system.  This is a non-ergodic system.
+* The average of one system is not a good predictor of the average of all
+  systems.
+* If one were to think about this in terms of wealth, it is perhaps more
+  important to avoid loss than aim for great gains.
